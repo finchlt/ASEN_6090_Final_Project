@@ -2,5 +2,28 @@ ASEN6090 Final Project
 
 Summary: Generate a parameter indicating snow cover on GPS antenna.
 
+* Primary Sites 
+  * P360
+    * Tracks Used: Make skyplot first.
+      * include L2c sats too
+  * P101 (?)
+
+* Parameters considered
+  * Truth: Digital site pictures
+  * MP1
+  * SNR -> Direct signal power
+  * LSP (periodograms)
+
+* Days under consideration
+  * February 2012
+    * with snow on antenna: 21 
+    * with snow, but no snow on antenna: 
+    * no snow: 
+  * November 2011
+
+ 
 *  Timeline
+   * 04/13 - Class Presentation
+   * Week I
+     * Look at parameters seperately
    
