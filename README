@@ -10,20 +10,19 @@ Summary: Generate a parameter indicating snow cover on GPS antenna.
 
 * Parameters considered
   * Truth: Digital site pictures
-  * MP1
-  * SNR -> Direct signal power
-  * LSP (periodograms)
+  * MP1 -> Kyle
+  * SNR -> Direct signal power -> Logan
+  * LSP (periodograms) -> Periodograms
 
 * Days under consideration
   * February 2012
-    * with snow on antenna: 21 
-    * with snow, but no snow on antenna: 
-    * no snow: 
-  * November 2011
-
+    * with snow on antenna: 21 1PM MST (UTC - 7)
+    * cloudy, but no snow on antenna: 22 1PM MST  (UTC - 7)
  
 *  Timeline
    * 04/13 - Class Presentation
    * Week I
      * Look at parameters seperately
+       * try to arrive at a heuristic thresholding method with/without snow cover.
+
    
