@@ -15,9 +15,13 @@ Summary: Generate a parameter indicating snow cover on GPS antenna.
   * LSP (periodograms) -> Periodograms
 
 * Days under consideration
-  * February 2012
-    * with snow on antenna: 21 1PM MST (UTC - 7)
-    * cloudy, but no snow on antenna: 22 1PM MST  (UTC - 7)
+  * February 2012 
+    * with snow on antenna: 21 
+      * 1PM MST (UTC - 7)
+      * GPS Week: 1676 | Day of Week: 2
+    * cloudy, but no snow on antenna: 22 
+      * 1PM MST  (UTC - 7)
+      * GPS Week: 1676 | Day of Week: 3
  
 *  Timeline
    * 04/13 - Class Presentation
@@ -25,4 +29,5 @@ Summary: Generate a parameter indicating snow cover on GPS antenna.
      * Look at parameters seperately
        * try to arrive at a heuristic thresholding method with/without snow cover.
 
-   
+* Notes
+  * Data files taken from ftp://garner.ucsd.edu/pub/
