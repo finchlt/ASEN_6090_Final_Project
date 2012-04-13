@@ -34,10 +34,10 @@
 
 \begin{frame}{Goals}
 \begin{itemize}
-  \item Generate an index representative of snow cover over GPS antenna
+  \item Generate an index representative of snow cover over GPS antenna.
   \item Considerations for Reflections study:
   \begin{itemize}
-    \item Snow cover directly over the antenna is not going to affect received signal power from lower elevation angles.
+    \item How much of an effect will Snow cover directly over the antenna have on received signal power from lower elevation angles.
 %    \item Ice may form on the side of antenna, which may cause problems.
 %    \item Detect signal loss from archived direct signal power for each SV at binned elevation.  
   \end{itemize}
@@ -88,6 +88,7 @@ Both the above sites have a digital camera installed on site.
     \begin{itemize}
       \item visible around the same time the photos were taken
       \item rises upto $89.4^o$
+      \item has L2c
     \end{itemize}
 \end{itemize}
 \end{frame}
@@ -98,7 +99,7 @@ Both the above sites have a digital camera installed on site.
 \begin{itemize}
   \item $MP_1$
   \item Signal to Noise Ratio (SNR)
-  \item Solution Time Series
+  \item Position Time Series
 \end{itemize}
 \end{frame}
 
@@ -106,15 +107,16 @@ Both the above sites have a digital camera installed on site.
 \begin{frame}{SNR}
 Heuristic
 \begin{itemize}
-  \item Accumulate expected SNR data as a function of elevation and PRN.
-  \item Use above data as a control data set to estimate power loss due to snow cover on antenna.
+  \item Accumulate SNR data as a function of elevation and PRN to generate an expectation map.
+  \item Use above data as a control data set to indicate if received signal power is lower than expected.
+  \item Can indicate snow cover.
 \end{itemize}
 \end{frame}
 \begin{frame}{SNR}
 Model
 \begin{itemize}
   \item Use simple EM model to calculate signal loss through a slab of snow.
-  \item estimate the snow cover over antenna, using the signal loss from direct signal power.
+  \item estimate the snow cover over antenna by comparing with the signal loss from direct signal power.
 \end{itemize}
 \end{frame}
 \end{frame}
@@ -128,6 +130,18 @@ Model
 %   \item Amplitude of modeled SNR does not vary with elevation.
 % \end{itemize}
 % \end{frame}
+
+%---snr plots  frame -------------------------%
+\begin{frame}{SNR Plots}
+  \includegraphics[width=1\linewidth]{img/snr_prn17_smth.eps}
+\end{frame}
+\begin{frame}{SNR Plots}
+  \includegraphics[width=1\linewidth]{img/snr_prn14_smth.eps}
+\end{frame}
+\begin{frame}{SNR Plots}
+  \includegraphics[width=1\linewidth]{img/snr_prn13.eps}
+\end{frame}
+
 
 %---  frame -------------------------%
 \begin{frame}{}

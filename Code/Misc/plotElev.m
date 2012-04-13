@@ -106,6 +106,7 @@ disp('Done')
 return
 %%
 
+p
 figure, hold on
 
 l=[];
@@ -136,19 +137,35 @@ plot(e);
 %%
 
 % prn = 13; sPt=655; ePt=804; % 80
-prn = 13; sPt=1; ePt=732; % rising
-% prn = 14; sPt=4146; ePt=4903; % rising
+% prn = 13; sPt=1; ePt=732; % rising
+prn = 14; sPt=4146; ePt=4903; % rising
+% prn = 17; sPt=1209; ePt=1966; % rising
 
 load p3600520.mat
 e1 = data.elev(prn,sPt:ePt);
 s1 = data.S1(prn,sPt:ePt);
 
 load p3600530.mat
-e1 = data.elev(prn,sPt:ePt);
-s1 = data.S1(prn,sPt:ePt);
+e2 = data.elev(prn,sPt:ePt);
+s2 = data.S1(prn,sPt:ePt);
 
-
+smth = 1;
+if smth == 1
+	s1 = smooth(s1);
+	s2 = smooth (s2);
+end
+%
 plot(e1,s1)
 hold on
 plot(e2,s2,'r')
+title(['PRN ' num2str(prn)])
+xlabel('elevation')
+ylabel('SNR (dbHz)')
+grid on
+%%
 
+ff_s=fft(s1);
+n=length(ff_s);
+pow = abs(ff_s(1:floor(n/2))).^2;
+plot(pow);
+plot(s1)
