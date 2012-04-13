@@ -133,3 +133,22 @@ e=result.elev(prn,:);
 
 plot(e);
 
+%%
+
+% prn = 13; sPt=655; ePt=804; % 80
+prn = 13; sPt=1; ePt=732; % rising
+% prn = 14; sPt=4146; ePt=4903; % rising
+
+load p3600520.mat
+e1 = data.elev(prn,sPt:ePt);
+s1 = data.S1(prn,sPt:ePt);
+
+load p3600530.mat
+e1 = data.elev(prn,sPt:ePt);
+s1 = data.S1(prn,sPt:ePt);
+
+
+plot(e1,s1)
+hold on
+plot(e2,s2,'r')
+
