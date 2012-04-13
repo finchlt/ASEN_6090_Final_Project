@@ -89,21 +89,21 @@ for epoch = 1:N_epochs
 		% compute range under enu
 		range_enu = sqrt(enu'*enu);
 				
-		% compute elevation angle
+		% compute azimuth angle
 		azi = atan2(SatPos(prn_idx,1),SatPos(prn_idx,2))*180/pi;
 		if (azi<0) azi = azi+360; end
 		
 		%compute elevation angle
 		elev = 90-acos(enu(3,1)/range_enu)*180/pi;
 
-		result.('elev')(prn,epoch) = elev;
-		result.('azi')(prn,epoch) = azi;
+		data.('elev')(prn,epoch) = elev;
+		data.('azi')(prn,epoch) = azi;
 	end
 	
 end
 
-result.elev(result.elev == 0) = NaN;
-result.azi(result.azi == 0) = NaN;
+data.elev(data.elev == 0) = NaN;
+data.azi(data.azi == 0) = NaN;
 
 return
 %%
