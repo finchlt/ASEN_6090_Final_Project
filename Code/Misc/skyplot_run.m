@@ -1,6 +1,7 @@
-%%% ASEN6090
-%%% HW7
+%%% Make a SkyPlot
 %%% Praveen Vikram
+
+%%% FIX: Something messed up with Azi 
 
 clear all
 close all
