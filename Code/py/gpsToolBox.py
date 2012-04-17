@@ -13,7 +13,7 @@ def getRinexData(station, year, doy):
     file=station+doy+'0.'+year[2:4]+'o.Z'
     print('Retrieving: '+file)
     
-    fid=open(file,'wb')
+    fid=open('./rinex/'+file,'wb')
     filename='/pub/rinex/'+year+'/'+doy+'/'+file
     print('\tLocated at '+filename)
     
@@ -22,10 +22,10 @@ def getRinexData(station, year, doy):
     print('Closing FTP connection')
     ftp.close()
     
-    os.system('gunzip -f '+file)
+    os.system('gunzip -f ./rinex/'+file)
     
     file=station+doy+'0.'+year[2:4]+'o'
-    data=gpsToolBox.readRinexObs(file)
+    data=gpsToolBox.readRinexObs('./rinex/'+file)
     
     print('Saving to '+station+doy+'0.mat')
     scipy.io.savemat(station+doy+'0.mat',data)

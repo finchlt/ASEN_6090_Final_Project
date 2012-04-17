@@ -1,6 +1,7 @@
 #!/usr/bin/python
 
 import gpsToolBox
+import os
 from optparse import OptionParser
 
 parser = OptionParser()
@@ -21,3 +22,7 @@ if options.station is not None:
     doy=options.doy
 
     gpsToolBox.getRinexData(station,year,doy)
+
+    cmd='mv '+station+doy+'0.mat ./../../Data/'+station+doy+'0.mat'
+    print(cmd)
+    os.system(cmd)

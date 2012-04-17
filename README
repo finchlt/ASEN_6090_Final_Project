@@ -7,6 +7,8 @@ Summary: Generate a parameter indicating snow cover on GPS antenna.
     * Tracks Used: Make skyplot first.
       * include L2c sats too
   * P101 (?)
+  * AB33
+  * P455
 
 * Parameters considered
   * Truth: Digital site pictures
