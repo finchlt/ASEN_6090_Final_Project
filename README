@@ -15,6 +15,7 @@ Summary: Generate a parameter indicating snow cover on GPS antenna.
   * MP1 -> Kyle
   * SNR -> Direct signal power -> Logan
   * LSP (periodograms) -> Periodograms
+    Doesnt seem useful at this point
 
 * Days under consideration
   * February 2012 
@@ -25,7 +26,7 @@ Summary: Generate a parameter indicating snow cover on GPS antenna.
       * 1PM MST  (UTC - 7)
       * GPS Week: 1676 | Day of Week: 3
  
-*  Timeline
+* Timeline
    * 04/13 - Class Presentation
    * Week I
      * Look at parameters seperately
