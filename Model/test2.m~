@@ -1,0 +1,9 @@
+f = 1.57542e9;
+c = 299792500;
+lambda = c/f;
+
+W_h = (Z_h3 + i*Z_hj*tan(phi_j))/(1+(Z_h3/Z_hj)*tan(phi_j)); 
+W_v = (Z_v3 + i*Z_vj*tan(phi_j))/(1+(Z_v3/Z_vj)*tan(phi_j)); 
+
+r_h = (W_h-1)/(W_h+1);
+r_v = (W_v-1)/(W_v+1);
