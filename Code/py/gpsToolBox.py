@@ -9,25 +9,38 @@ def getRinexData(station, year, doy):
     ftp.login()
     
     print('Connected to FTP')
-    
+
+    # get rinex
     file=station+doy+'0.'+year[2:4]+'d.Z'
     print('Retrieving: '+file)
-    
     fid=open('./rinex/'+file,'wb')
     filename='/pub/rinex/'+year+'/'+doy+'/'+file
     print('\tLocated at '+filename)
-    
     ftp.retrbinary("RETR " + filename, fid.write)
+    fid.close()
+
+    cmd='gunzip -f ./rinex/'+file
+    print(cmd)
+    os.system(cmd)
     
-    print('Closing FTP connection')
-    ftp.close()
+    # get nav
+    file='auto'+doy+'0.'+year[2:4]+'n.Z'
+    print('Retrieving: '+file)
+    fid=open('./rinex/'+file,'wb')
+    filename='/pub/rinex/'+year+'/'+doy+'/'+file
+    print('\tLocated at '+filename)
+    ftp.retrbinary("RETR " + filename, fid.write)
+    fid.close()
 
     cmd='gunzip -f ./rinex/'+file
     print(cmd)
     os.system(cmd)
 
+    print('Closing FTP connection')
+    ftp.close()
+    
     file=station+doy+'0.'+year[2:4]+'d'
-    cmd='CRX2RNX ./rinex/'+file
+    cmd='CRX2RNX -f ./rinex/'+file
     os.system(cmd)
     
     file=station+doy+'0.'+year[2:4]+'o'
@@ -166,13 +179,13 @@ def readRinexObs(filename):
         nSV=int(line[30:-1].split('G')[0])
         prnInView=line[30:-1].split('G')[1:]
         
-        print('epoch: '+repr(epoch)+' | nSV: '+repr(nSV))
-        print(repr(result['hour'][0,epoch])+' : '+repr(result['min'][0,epoch])+' : '+repr(result['sec'][0,epoch]))
-        print('-----')
+        #print('epoch: '+repr(epoch)+' | nSV: '+repr(nSV))
+        #print(repr(result['hour'][0,epoch])+' : '+repr(result['min'][0,epoch])+' : '+repr(result['sec'][0,epoch]))
+        #print('-----')
         
         # read in observables for each PRN
         for i in range(nSV):
-            print('PRN: '+prnInView[i])
+            #print('PRN: '+prnInView[i])
             prn=int(prnInView[i])
             line=fid.readline()
             obs=line[:-1].split()
@@ -183,7 +196,7 @@ def readRinexObs(filename):
             nObsLine = math.ceil(header['nObservables']/5)
             
             for o in range(header['nObservables']):
-                print(repr(o)+' : '+header['observables'][o]+' : '+line[16*nObs+1:16*nObs+16])
+                #print(repr(o)+' : '+header['observables'][o]+' : '+line[16*nObs+1:16*nObs+16])
                 try:
                     result[header['observables'][o]][prn-1,epoch]=float( line[16*nObs+1:16*nObs+16] )
                 except ValueError: # handle blank space in Rinex file
@@ -197,7 +210,7 @@ def readRinexObs(filename):
                     line=fid.readline()
                     obs=line[:-1].split()
                     nObs=0
-        print('----')
+        #print('----')
         epoch=epoch+1
         
         #break

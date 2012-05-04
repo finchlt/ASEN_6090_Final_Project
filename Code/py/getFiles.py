@@ -14,15 +14,16 @@ parser.add_option("-y", "--year",dest="year",
 
 
 (options, args) = parser.parse_args()
-print(options)
+#print(options)
 
 if options.station is not None:
     station=options.station
     year=options.year
-    doy=options.doy
+    doyI=int(options.doy)
+    doy="%03d"%doyI
 
     gpsToolBox.getRinexData(station,year,doy)
 
-    cmd='mv '+station+doy+'0.mat ./../../Data/'+station+doy+'0.mat'
+    cmd='mv '+station+doy+'0.mat ./../../Data/mat/'+station+doy+'0_'+year+'.mat'
     print(cmd)
     os.system(cmd)
