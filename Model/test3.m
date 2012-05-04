@@ -51,5 +51,5 @@ set(gca,'FontSize',fontSize)
 grid on
 text(1.2,0.9998,'\rho_d=0.24','FontSize',fontSize)
 text(1.2,0.9997,'T=0C','FontSize',fontSize)
-text(1.2,0.9996,'\epsilon=1.48-j2.71x10^{-4}','FontSize',fontSize)
+text(1.2,0.9996,'\epsilon=1.48-j5.69x10^{-5}','FontSize',fontSize)
 

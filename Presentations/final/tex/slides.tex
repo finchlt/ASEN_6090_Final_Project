@@ -82,6 +82,9 @@ Sites for Primary Study
     E = E_0 exp[j (Re(k).r - \omega t)]exp[-Im(k).r].
   \end{equation}
 \end{itemize}
+\begin{center}
+\includegraphics[width=0.8\linewidth,trim=100 100 100 100, clip=true]{model1.pdf}
+\end{center}
 \end{frame}
 
 \begin{frame}{Model}
@@ -140,7 +143,7 @@ Sites for Primary Study
         \end{equation*}
         \begin{align*}
           \epsilon_s'' = &\epsilon_s' \times 1.59 \times 10^6 \times \frac{0.52\rho_d + 0.62\rho_d^2}{7 + 1.7\rho_d + 0.7\rho_d^2}\\
-          & \times (f^{-1} + 1.23 \times 10^{-6}\sqrt{f})e^{0.036 T}
+          & \times (f_{L1}^{-1} + 1.23 \times 10^{-6}\sqrt{f_{L1}})e^{0.036 T}
         \end{align*}
       \item Where, \\$\rho_d$ is relative density of dry snow \\$T$ is the temperature of snow in Celsius.
     \end{itemize}
@@ -152,10 +155,87 @@ Sites for Primary Study
 
 \end{frame}
 
-\begin{frame}{Model - $\epsilon$ for Snow}
+\begin{frame}{Model}
+\includegraphics[width=1\linewidth]{model_1.eps}
+\end{frame}
+
+%%% Kyle's slides
+
+
+%%% SNR slides
+\begin{frame}{SNR}
+  \begin{itemize}
+  \item Generate a statistical map if expected SNR values w.r.t Elevation angle.
+  \item Data from 2011 DOY 200-250 was used to generate the map
+  \item Each SV was considered seperately
+    \begin{itemize}
+    \item Individual Tracks could be tagged as 'Bad'
+    \item Each SV has varying transmit power
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{SNR Map}
+  \includegraphics[width=1\linewidth,clip=true]{snrMap.eps}
+\end{frame}
+
+\begin{frame}{SNR Index}
+  \includegraphics[width=1\linewidth,clip=true]{snrIndex.eps}
+\end{frame}
+
+%%% Logan's Slides
+\begin{frame}{Position Time Series - P360}
+  \begin{itemize}
+  \item 2009 to 2012\\
+  \end{itemize}
+
+  \begin{columns}
+    \column{.5\textwidth}
+    \includegraphics[width=1\linewidth,trim=70 300 70 50, clip=true]{logan/p360_pos.pdf}
+
+    \column{.5\textwidth}
+    \includegraphics[width=1\linewidth,trim=70 300 70 50, clip=true]{logan/p360_pos_byYear.pdf}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Position Time Series - P360}
+  \includegraphics[width=1\linewidth,trim=50 0 50 20, clip=true]{logan/p360_snotel.pdf}
+\end{frame}
+
+\begin{frame}{Position Time Series - AB33}
 \begin{itemize}
-      \item An approximate complex permittivity for dry snow for GPS frequncy is $1.48-j2.71\times 10^{-4}$
+\item 2009 to 2012\\
 \end{itemize}
+
+\begin{columns}
+\column{.5\textwidth}
+\includegraphics[width=1\linewidth,trim=70 300 70 50, clip=true]{logan/ab33_pos.pdf}
+
+\column{.5\textwidth}
+\includegraphics[width=1\linewidth,trim=70 300 70 50, clip=true]{logan/ab33_pos_byYear.pdf}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Position Time Series - AB33}
+  \includegraphics[width=1\linewidth,trim=50 0 50 20, clip=true]{logan/ab33_snotel.pdf}
+\end{frame}
+
+\begin{frame}{Position Time Series - P455}
+\begin{itemize}
+\item 2009 to 2012\\
+\end{itemize}
+
+\begin{columns}
+\column{.5\textwidth}
+\includegraphics[width=1\linewidth,trim=70 300 70 50, clip=true]{logan/p455_pos.pdf}
+
+\column{.5\textwidth}
+\includegraphics[width=1\linewidth,trim=70 300 70 50, clip=true]{logan/p455_pos_byYear.pdf}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Position Time Series - P455}
+  \includegraphics[width=1\linewidth,trim=50 0 50 20, clip=true]{logan/p455_snotel.pdf}
 \end{frame}
 
 \end{document}
