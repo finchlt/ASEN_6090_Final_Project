@@ -40,7 +40,7 @@ dec_date = dec_date(inds:inde,1);
 snow_data = snow_data(inds:inde,:);
 
 % plot data
-plot(dec_date,snow_data(:,5)*1000,'.');
+plot(dec_date,snow_data(:,5)*1000,'.','markersize',16);
 grid on
 axis fill
 ylabel('Snow depth (mm)','fontsize',12)
