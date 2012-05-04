@@ -1,14 +1,25 @@
 % slides.tex
 \documentclass{beamer}
-\usetheme{default}
-\usepackage[absolute,overlay]{textpos} 
+
+\usetheme[height=7mm]{Marburg} 
+%\usepackage{beamerthemesplit}
+
+\usepackage{graphicx} 
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{cases}
+\usepackage{pifont}
+\usepackage[absolute,overlay]{textpos}
+
+%\usetheme{default}
+
 \newenvironment{reference}[2]{% 
   \begin{textblock*}{\textwidth}(#1,#2) 
       \footnotesize\it\bgroup\color{red!50!black}}{\egroup\end{textblock*}} 
 
-\title{Detecting Snow Cover on GPS Antenna}
+\title[]{Detecting Snow Cover on GPS Antenna}
 \subtitle{ASEN6090 Final Project}
-\author{Kyle Wolma\\Logan Finch\\Praveen Vikram\\}
+\author[]{Kyle Wolma\\Logan Finch\\Praveen Vikram\\}
 \institute[CU-ASEN]{
   Department of Aerospace Engineering Sciences\\
   Colorado University\\
@@ -24,6 +35,7 @@
 \end{frame}
 
 %--- outline frame -------------------------%
+\section[Outline]{}
 \begin{frame}{Outline}
 
 \begin{itemize}
@@ -38,6 +50,7 @@
 
 \end{frame}
 
+\section[Goals]{}
 \begin{frame}{Goals}
 \begin{itemize}
   \item Generate an index representative of snow cover over GPS antenna.
@@ -51,6 +64,7 @@
 \end{frame}
 
 %--- sites frame -------------------------%
+\section[Sites]{}
 \begin{frame}{Sites}
 
 Sites for Primary Study
@@ -67,6 +81,7 @@ Sites for Primary Study
  
 \end{frame}
 
+\section[Model]{}
 \begin{frame}{Model}
 \begin{itemize}
 \item Basic EM wave propogation (Plane solution to Maxwell's Equations)
@@ -219,9 +234,10 @@ Sites for Primary Study
 
 
 %%% SNR slides
+\section[SNR]{}
 \begin{frame}{SNR}
   \begin{itemize}
-  \item Generate a statistical map if expected SNR values w.r.t Elevation angle.
+  \item Generate a statistical map of expected SNR values w.r.t Elevation angle.
   \item Data from 2011 DOY 200-250 was used to generate the map
   \item Each SV was considered seperately
     \begin{itemize}
@@ -243,6 +259,7 @@ Sites for Primary Study
 \end{frame}
 
 %%% Logan's Slides
+\section[Position]{}
 \begin{frame}{Position Time Series - P360}
   \begin{itemize}
   \item 2009 to 2012\\
@@ -295,6 +312,21 @@ Sites for Primary Study
 
 \begin{frame}{Position Time Series - P455}
   \includegraphics[width=1\linewidth,trim=50 0 50 20, clip=true]{logan/p455_snotel.pdf}
+\end{frame}
+
+\begin{frame}{Conclusions}
+\section[Conclusion]{}
+\end{frame}
+
+\begin{frame}
+{
+\vspace{60pt}
+\huge
+\centering
+Questions\\}
+\begin{center}
+\ding{115} \ding{108} \ding{117}
+\end{center}
 \end{frame}
 
 \end{document}
