@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2012/dev/Arch Linux) (format=pdflatex 2012.4.16)  4 MAY 2012 03:05
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2012/dev/Arch Linux) (format=pdflatex 2012.4.16)  4 MAY 2012 04:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -893,7 +893,7 @@ df model_1.eps>
 (epstopdf)             \includegraphics on input line 160.
 Package epstopdf Info: Output file is already uptodate.
 
-<model_1-eps-converted-to.pdf, id=242, 449.68pt x 338.26375pt>
+<model_1-eps-converted-to.pdf, id=243, 449.68pt x 338.26375pt>
 File: model_1-eps-converted-to.pdf Graphic file (type pdf)
 
 <use model_1-eps-converted-to.pdf>
@@ -902,7 +902,49 @@ Package pdftex.def Info: model_1-eps-converted-to.pdf used on input line 160.
  [9
 
  <./model_1-eps-converted-to.pdf>]
-[10
+Package epstopdf Info: Source file: <model_2.eps>
+(epstopdf)                    date: 2012-05-04 03:57:39
+(epstopdf)                    size: 12697 bytes
+(epstopdf)             Output file: <model_2-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-05-04 03:58:01
+(epstopdf)                    size: 11647 bytes
+(epstopdf)             Command: <repstopdf --outfile=model_2-eps-converted-to.p
+df model_2.eps>
+(epstopdf)             \includegraphics on input line 164.
+Package epstopdf Info: Output file is already uptodate.
+
+<model_2-eps-converted-to.pdf, id=281, 449.68pt x 338.26375pt>
+File: model_2-eps-converted-to.pdf Graphic file (type pdf)
+
+<use model_2-eps-converted-to.pdf>
+Package pdftex.def Info: model_2-eps-converted-to.pdf used on input line 164.
+(pdftex.def)             Requested size: 307.28987pt x 231.16214pt.
+ [10
+
+ <./model_2-eps-converted-to.pdf>]
+<logan/paper.pdf, id=313, 614.295pt x 794.97pt>
+File: logan/paper.pdf Graphic file (type pdf)
+ <use logan/paper.pdf>
+Package pdftex.def Info: logan/paper.pdf used on input line 195.
+(pdftex.def)             Requested size: 147.50119pt x 190.8816pt.
+
+Overfull \vbox (37.99187pt too high) detected at line 195
+ []
+
+[11
+
+ <./logan/paper.pdf>] [12
+
+]
+<paper_snow_cover_tbl1.png, id=371, 597.73312pt x 225.84375pt>
+File: paper_snow_cover_tbl1.png Graphic file (type png)
+
+<use paper_snow_cover_tbl1.png>
+Package pdftex.def Info: paper_snow_cover_tbl1.png used on input line 217.
+(pdftex.def)             Requested size: 307.28987pt x 116.10577pt.
+ [13
+
+ <./paper_snow_cover_tbl1.png>] [14
 
 ]
 Package epstopdf Info: Source file: <snrMap.eps>
@@ -913,122 +955,127 @@ Package epstopdf Info: Source file: <snrMap.eps>
 (epstopdf)                    size: 111007 bytes
 (epstopdf)             Command: <repstopdf --outfile=snrMap-eps-converted-to.pd
 f snrMap.eps>
-(epstopdf)             \includegraphics on input line 180.
+(epstopdf)             \includegraphics on input line 239.
 Package epstopdf Info: Output file is already uptodate.
- <snrMap-eps-converted-to.pdf, id=305, 449.68pt x 338.26375pt>
+
+<snrMap-eps-converted-to.pdf, id=425, 449.68pt x 338.26375pt>
 File: snrMap-eps-converted-to.pdf Graphic file (type pdf)
 
 <use snrMap-eps-converted-to.pdf>
-Package pdftex.def Info: snrMap-eps-converted-to.pdf used on input line 180.
+Package pdftex.def Info: snrMap-eps-converted-to.pdf used on input line 239.
 (pdftex.def)             Requested size: 307.28987pt x 231.16214pt.
- [11
+
+
+Package textpos Warning: environment textblock* not in vertical mode. 
+(textpos)                Environment textblock* should not have any text
+(textpos)                or printable material appearing before it.
+(textpos)                Alignment may work out wrongly. on input line 239.
+
+[15
 
  <./snrMap-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <snrIndex.eps>
 (epstopdf)                    date: 2012-05-04 03:05:26
 (epstopdf)                    size: 20150 bytes
 (epstopdf)             Output file: <snrIndex-eps-converted-to.pdf>
+(epstopdf)                    date: 2012-05-04 03:05:55
+(epstopdf)                    size: 14100 bytes
 (epstopdf)             Command: <repstopdf --outfile=snrIndex-eps-converted-to.
 pdf snrIndex.eps>
-(epstopdf)             \includegraphics on input line 184.
-runsystem(repstopdf --outfile=snrIndex-eps-converted-to.pdf snrIndex.eps)...exe
-cuted safely (allowed).
+(epstopdf)             \includegraphics on input line 243.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <snrIndex-eps-converted-to.pdf>
-(epstopdf)                    date: 2012-05-04 03:05:55
-(epstopdf)                    size: 14100 bytes.
-
-<snrIndex-eps-converted-to.pdf, id=339, 449.68pt x 338.26375pt>
+<snrIndex-eps-converted-to.pdf, id=461, 449.68pt x 338.26375pt>
 File: snrIndex-eps-converted-to.pdf Graphic file (type pdf)
 
 <use snrIndex-eps-converted-to.pdf>
-Package pdftex.def Info: snrIndex-eps-converted-to.pdf used on input line 184.
+Package pdftex.def Info: snrIndex-eps-converted-to.pdf used on input line 243.
 (pdftex.def)             Requested size: 307.28987pt x 231.16214pt.
- [12
+ [16
 
  <./snrIndex-eps-converted-to.pdf>]
-<logan/p360_pos.pdf, id=375, 614.295pt x 794.97pt>
+<logan/p360_pos.pdf, id=497, 614.295pt x 794.97pt>
 File: logan/p360_pos.pdf Graphic file (type pdf)
  <use logan/p360_pos.pdf>
-Package pdftex.def Info: logan/p360_pos.pdf used on input line 199.
+Package pdftex.def Info: logan/p360_pos.pdf used on input line 258.
 (pdftex.def)             Requested size: 153.64493pt x 143.87529pt.
 
-<logan/p360_pos_byYear.pdf, id=377, 614.295pt x 794.97pt>
+<logan/p360_pos_byYear.pdf, id=499, 614.295pt x 794.97pt>
 File: logan/p360_pos_byYear.pdf Graphic file (type pdf)
 
 <use logan/p360_pos_byYear.pdf>
-Package pdftex.def Info: logan/p360_pos_byYear.pdf used on input line 199.
-(pdftex.def)             Requested size: 153.64493pt x 143.87529pt.
- [13
-
- <./logan/p360_pos.pdf> <./logan/p360_pos_byYear.pdf>] <logan/p360_snotel.pdf, 
-id=415, 614.295pt x 794.97pt>
-File: logan/p360_snotel.pdf Graphic file (type pdf)
-
-<use logan/p360_snotel.pdf>
-Package pdftex.def Info: logan/p360_snotel.pdf used on input line 203.
-(pdftex.def)             Requested size: 307.28987pt x 463.34433pt.
-
-Overfull \vbox (218.07121pt too high) detected at line 203
- []
-
-[14
-
- <./logan/p360_snotel.pdf>]
-<logan/ab33_pos.pdf, id=447, 614.295pt x 794.97pt>
-File: logan/ab33_pos.pdf Graphic file (type pdf)
- <use logan/ab33_pos.pdf>
-Package pdftex.def Info: logan/ab33_pos.pdf used on input line 217.
-(pdftex.def)             Requested size: 153.64493pt x 143.87529pt.
-
-<logan/ab33_pos_byYear.pdf, id=449, 614.295pt x 794.97pt>
-File: logan/ab33_pos_byYear.pdf Graphic file (type pdf)
-
-<use logan/ab33_pos_byYear.pdf>
-Package pdftex.def Info: logan/ab33_pos_byYear.pdf used on input line 217.
-(pdftex.def)             Requested size: 153.64493pt x 143.87529pt.
- [15
-
- <./logan/ab33_pos.pdf> <./logan/ab33_pos_byYear.pdf>] <logan/ab33_snotel.pdf, 
-id=487, 614.295pt x 794.97pt>
-File: logan/ab33_snotel.pdf Graphic file (type pdf)
-
-<use logan/ab33_snotel.pdf>
-Package pdftex.def Info: logan/ab33_snotel.pdf used on input line 221.
-(pdftex.def)             Requested size: 307.28987pt x 463.34433pt.
-
-Overfull \vbox (218.07121pt too high) detected at line 221
- []
-
-[16
-
- <./logan/ab33_snotel.pdf>]
-<logan/p455_pos.pdf, id=518, 614.295pt x 794.97pt>
-File: logan/p455_pos.pdf Graphic file (type pdf)
- <use logan/p455_pos.pdf>
-Package pdftex.def Info: logan/p455_pos.pdf used on input line 235.
-(pdftex.def)             Requested size: 153.64493pt x 143.87529pt.
-
-<logan/p455_pos_byYear.pdf, id=520, 614.295pt x 794.97pt>
-File: logan/p455_pos_byYear.pdf Graphic file (type pdf)
-
-<use logan/p455_pos_byYear.pdf>
-Package pdftex.def Info: logan/p455_pos_byYear.pdf used on input line 235.
+Package pdftex.def Info: logan/p360_pos_byYear.pdf used on input line 258.
 (pdftex.def)             Requested size: 153.64493pt x 143.87529pt.
  [17
 
- <./logan/p455_pos.pdf> <./logan/p455_pos_byYear.pdf>] <logan/p455_snotel.pdf, 
-id=556, 614.295pt x 794.97pt>
-File: logan/p455_snotel.pdf Graphic file (type pdf)
+ <./logan/p360_pos.pdf> <./logan/p360_pos_byYear.pdf>] <logan/p360_snotel.pdf, 
+id=536, 614.295pt x 794.97pt>
+File: logan/p360_snotel.pdf Graphic file (type pdf)
 
-<use logan/p455_snotel.pdf>
-Package pdftex.def Info: logan/p455_snotel.pdf used on input line 239.
+<use logan/p360_snotel.pdf>
+Package pdftex.def Info: logan/p360_snotel.pdf used on input line 262.
 (pdftex.def)             Requested size: 307.28987pt x 463.34433pt.
 
-Overfull \vbox (218.07121pt too high) detected at line 239
+Overfull \vbox (218.07121pt too high) detected at line 262
  []
 
 [18
+
+ <./logan/p360_snotel.pdf>]
+<logan/ab33_pos.pdf, id=568, 614.295pt x 794.97pt>
+File: logan/ab33_pos.pdf Graphic file (type pdf)
+ <use logan/ab33_pos.pdf>
+Package pdftex.def Info: logan/ab33_pos.pdf used on input line 276.
+(pdftex.def)             Requested size: 153.64493pt x 143.87529pt.
+
+<logan/ab33_pos_byYear.pdf, id=570, 614.295pt x 794.97pt>
+File: logan/ab33_pos_byYear.pdf Graphic file (type pdf)
+
+<use logan/ab33_pos_byYear.pdf>
+Package pdftex.def Info: logan/ab33_pos_byYear.pdf used on input line 276.
+(pdftex.def)             Requested size: 153.64493pt x 143.87529pt.
+ [19
+
+ <./logan/ab33_pos.pdf> <./logan/ab33_pos_byYear.pdf>] <logan/ab33_snotel.pdf, 
+id=609, 614.295pt x 794.97pt>
+File: logan/ab33_snotel.pdf Graphic file (type pdf)
+
+<use logan/ab33_snotel.pdf>
+Package pdftex.def Info: logan/ab33_snotel.pdf used on input line 280.
+(pdftex.def)             Requested size: 307.28987pt x 463.34433pt.
+
+Overfull \vbox (218.07121pt too high) detected at line 280
+ []
+
+[20
+
+ <./logan/ab33_snotel.pdf>]
+<logan/p455_pos.pdf, id=641, 614.295pt x 794.97pt>
+File: logan/p455_pos.pdf Graphic file (type pdf)
+ <use logan/p455_pos.pdf>
+Package pdftex.def Info: logan/p455_pos.pdf used on input line 294.
+(pdftex.def)             Requested size: 153.64493pt x 143.87529pt.
+
+<logan/p455_pos_byYear.pdf, id=643, 614.295pt x 794.97pt>
+File: logan/p455_pos_byYear.pdf Graphic file (type pdf)
+
+<use logan/p455_pos_byYear.pdf>
+Package pdftex.def Info: logan/p455_pos_byYear.pdf used on input line 294.
+(pdftex.def)             Requested size: 153.64493pt x 143.87529pt.
+ [21
+
+ <./logan/p455_pos.pdf> <./logan/p455_pos_byYear.pdf>] <logan/p455_snotel.pdf, 
+id=679, 614.295pt x 794.97pt>
+File: logan/p455_snotel.pdf Graphic file (type pdf)
+
+<use logan/p455_snotel.pdf>
+Package pdftex.def Info: logan/p455_snotel.pdf used on input line 298.
+(pdftex.def)             Requested size: 307.28987pt x 463.34433pt.
+
+Overfull \vbox (218.07121pt too high) detected at line 298
+ []
+
+[22
 
  <./logan/p455_snotel.pdf>]
 \tf@nav=\write6
@@ -1040,11 +1087,11 @@ Overfull \vbox (218.07121pt too high) detected at line 239
 \tf@snm=\write8
 \openout8 = `slides.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 241.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 241.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 300.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 300.
  (./slides.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 241.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 241.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 300.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 300.
 Package rerunfilecheck Info: File `slides.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -1054,32 +1101,35 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 15541 strings out of 493629
- 286608 string characters out of 3148778
- 364616 words of memory out of 3000000
- 18428 multiletter control sequences out of 15000+200000
- 16057 words of font info for 60 fonts, out of 3000000 for 9000
+ 15633 strings out of 493629
+ 288676 string characters out of 3148778
+ 365616 words of memory out of 3000000
+ 18504 multiletter control sequences out of 15000+200000
+ 18198 words of font info for 68 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 49i,14n,55p,420b,543s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 49i,14n,55p,420b,864s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr
-/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmssi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmssi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.
-pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/shar
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmtt8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symb
-ols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7
-.pfb>
-Output written on slides.pdf (18 pages, 593950 bytes).
+mmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/
+share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmss8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmss9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.p
+fb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/shar
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmssi9.pfb></usr/share/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></u
+sr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texmf-dist/fonts/type
+1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/
+amsfonts/symbols/msam7.pfb>
+Output written on slides.pdf (22 pages, 743546 bytes).
 PDF statistics:
- 651 PDF objects out of 1000 (max. 8388607)
- 561 compressed objects within 6 object streams
- 36 named destinations out of 1000 (max. 500000)
- 170 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 789 PDF objects out of 1000 (max. 8388607)
+ 682 compressed objects within 7 object streams
+ 44 named destinations out of 1000 (max. 500000)
+ 197 words of extra memory for PDF output out of 10000 (max. 10000000)
 

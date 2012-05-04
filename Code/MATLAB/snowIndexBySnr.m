@@ -61,8 +61,8 @@ for doy = 1:90
 		% check if snr val is within expected range
 		for i = 1:length(idx)
 			j=idx(i);
-			if ~(  (snr(j)> (snr_map.mu(prn,elev(j))-2*snr_map.sig(prn,elev(j))) ) && ...
-					 (snr(j)< (snr_map.mu(prn,elev(j))+2*snr_map.sig(prn,elev(j))) ) )
+			if ~(  (snr(j)> (snr_map.mu(prn,elev(j))-3*snr_map.sig(prn,elev(j))^2) ) && ...
+					 (snr(j)< (snr_map.mu(prn,elev(j))+3*snr_map.sig(prn,elev(j))^2) ) )
 				 snowIndex(doy) = 1;
 				 nTrack(doy) = nTrack(doy) + 1;
 				 break;
