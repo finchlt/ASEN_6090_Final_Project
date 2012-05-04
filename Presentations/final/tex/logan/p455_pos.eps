@@ -1,9 +1,10 @@
 %!PS-Adobe-2.0 EPSF-1.2
 %%Creator: MATLAB, The MathWorks, Inc. Version 7.14.0.739 (R2012a). Operating System: Darwin 11.3.0 Darwin Kernel Version 11.3.0: Thu Jan 12 18:47:41 PST 2012; root:xnu-1699.24.23~1/RELEASE_X86_64 x86_64.
 %%Title: ./p455_pos.eps
-%%CreationDate: 05/04/2012  09:25:04
+%%CreationDate: 05/04/2012  09:34:02
 %%DocumentNeededFonts: Helvetica
 %%DocumentProcessColors: Cyan Magenta Yellow Black
+%%Extensions: CMYK
 %%Pages: 1
 %%BoundingBox:    40   193   562   616
 %%EndComments
@@ -135,12 +136,14 @@
   smat stri tri_to_matrix tmat2 concatmatrix } bdef
 /ds {stri astore pop} bdef
 /dt {dtri astore pop} bdef
-/db {2 copy /cols xdef /rows xdef mul dup string
+/db {2 copy /cols xdef /rows xdef mul dup 3 mul string
   currentfile exch readhexstring pop
-  /bmap xdef pop pop} bdef
+  dup 0 3 index getinterval /rbmap xdef
+  dup 2 index dup getinterval /gbmap xdef
+  1 index dup 2 mul exch getinterval /bbmap xdef pop pop}bdef
 /it {gs np dtri aload pop moveto lineto lineto cp c
   cols rows 8 compute_transform 
-  {bmap} image gr}bdef
+  rbmap gbmap bbmap true 3 colorimage gr}bdef
 /il {newpath moveto lineto stroke}bdef
 currentdict end def
 %%EndProlog
@@ -289,6 +292,8 @@ SO
 gs 900 661 5366 1498 MR c np
 gs 1184 753 4626 1381 MR c np
 64 W
+/c8 { 0.000000 0.000000 1.000000 sr} bdef
+c8
 1377 1650 PD
 64 W
 1396 1589 PD
@@ -754,8 +759,11 @@ gs 1184 753 4626 1381 MR c np
 5616 1774 PD
 gr
 
+c8
 gr
 
+c8
+0 sg
 %%IncludeResource: font Helvetica
 /Helvetica /ISOLatin1Encoding 168 FMSR
 
@@ -875,6 +883,7 @@ gr
 
 gs 1191 3382 4765 1428 MR c np
 64 W
+c8
 1384 4616 PD
 64 W
 1402 4616 PD
@@ -1358,9 +1367,11 @@ gs 1191 3382 4765 1428 MR c np
 5762 4336 PD
 gr
 
+c8
 gs 900 3118 5366 1499 MR c np
 gr
 
+0 sg
 %%IncludeResource: font Helvetica
 /Helvetica /ISOLatin1Encoding 168 FMSR
 

@@ -1,9 +1,10 @@
 %!PS-Adobe-2.0 EPSF-1.2
 %%Creator: MATLAB, The MathWorks, Inc. Version 7.14.0.739 (R2012a). Operating System: Darwin 11.3.0 Darwin Kernel Version 11.3.0: Thu Jan 12 18:47:41 PST 2012; root:xnu-1699.24.23~1/RELEASE_X86_64 x86_64.
 %%Title: ./p360_pos_byYear.eps
-%%CreationDate: 05/04/2012  09:25:03
+%%CreationDate: 05/04/2012  09:34:01
 %%DocumentNeededFonts: Helvetica
 %%DocumentProcessColors: Cyan Magenta Yellow Black
+%%Extensions: CMYK
 %%Pages: 1
 %%BoundingBox:    47   193   555   616
 %%EndComments
@@ -135,12 +136,14 @@
   smat stri tri_to_matrix tmat2 concatmatrix } bdef
 /ds {stri astore pop} bdef
 /dt {dtri astore pop} bdef
-/db {2 copy /cols xdef /rows xdef mul dup string
+/db {2 copy /cols xdef /rows xdef mul dup 3 mul string
   currentfile exch readhexstring pop
-  /bmap xdef pop pop} bdef
+  dup 0 3 index getinterval /rbmap xdef
+  dup 2 index dup getinterval /gbmap xdef
+  1 index dup 2 mul exch getinterval /bbmap xdef pop pop}bdef
 /it {gs np dtri aload pop moveto lineto lineto cp c
   cols rows 8 compute_transform 
-  {bmap} image gr}bdef
+  rbmap gbmap bbmap true 3 colorimage gr}bdef
 /il {newpath moveto lineto stroke}bdef
 currentdict end def
 %%EndProlog
@@ -167,7 +170,7 @@ bplot
 portraitMode 0216 7344 csm
 
   348   -48  6102  5072 MR c np
-85 dict begin %Colortable dictionary
+87 dict begin %Colortable dictionary
 /c0 { 0.000000 0.000000 0.000000 sr} bdef
 /c1 { 1.000000 1.000000 1.000000 sr} bdef
 /c2 { 0.900000 0.000000 0.000000 sr} bdef
@@ -304,6 +307,8 @@ gr
 
 gs 736 958 5708 3494 MR c np
 64 W
+/c8 { 0.282353 0.462745 1.000000 sr} bdef
+c8
 929 2097 PD
 64 W
 944 1371 PD
@@ -1027,11 +1032,13 @@ gs 736 958 5708 3494 MR c np
 6250 2346 PD
 gr
 
+c8
 gs 900 661 5366 3956 MR c np
 gr
 
 gs 707 1370 5737 2649 MR c np
 64 W
+0 sg
 900 2590 PD
 64 W
 944 2158 PD
@@ -1739,11 +1746,14 @@ gs 707 1370 5737 2649 MR c np
 6250 3249 PD
 gr
 
+0 sg
 gs 900 661 5366 3956 MR c np
 gr
 
 gs 707 610 5737 3871 MR c np
 64 W
+/c9 { 1.000000 0.000000 0.000000 sr} bdef
+c9
 900 3694 PD
 64 W
 914 3824 PD
@@ -2467,11 +2477,14 @@ gs 707 610 5737 3871 MR c np
 6250 2899 PD
 gr
 
+c9
 gs 900 661 5366 3956 MR c np
 gr
 
 gs 707 1984 2014 1989 MR c np
 64 W
+/c10 { 0.133333 0.545098 0.133333 sr} bdef
+c10
 900 2829 PD
 64 W
 914 2778 PD
@@ -2683,9 +2696,11 @@ gs 707 1984 2014 1989 MR c np
 2527 3779 PD
 gr
 
+c10
 gs 900 661 5366 3956 MR c np
 gr
 
+0 sg
 %%IncludeResource: font Helvetica
 /Helvetica /ISOLatin1Encoding 168 FMSR
 
@@ -2736,12 +2751,15 @@ gr
 
 gs 5423 634 387 387 MR c np
 64 W
+c8
 5616 827 PD
 gr
 
+c8
 gs 5379 721 827 739 MR c np
 gr
 
+0 sg
 5821 1054 mt 
 (2010) s
 gs 5379 721 827 739 MR c np
@@ -2757,11 +2775,15 @@ gr
 gs 5379 721 827 739 MR c np
 gs 5423 984 387 387 MR c np
 64 W
+c9
 5616 1177 PD
 gr
 
+c9
 gr
 
+c9
+0 sg
 5821 1405 mt 
 (2012) s
 gs 5379 721 827 739 MR c np
@@ -2769,9 +2791,11 @@ gr
 
 gs 5423 1159 387 387 MR c np
 64 W
+c10
 5616 1352 PD
 gr
 
+c10
 gs 5379 721 827 739 MR c np
 gr
 
