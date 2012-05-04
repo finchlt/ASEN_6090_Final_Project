@@ -13,7 +13,7 @@ subplot(2,1,1)
 TimeSeriesPlot('AB33_timeSeries.mat',sd,ed)
 subplot(2,1,2)
 SnotelPlot('ab33',sd,ed)
-str = sprintf('ab33_snotel.eps');
+str = sprintf('ab33_pos_byYear.eps');
 h = gcf;
 cd /Users/Logan/Dropbox/ASEN6090/ASEN_6090_Final_Project/Presentations/final/tex/logan
 print(h,'-deps',str);
@@ -34,7 +34,7 @@ cd /Users/Logan/Dropbox/ASEN6090/ASEN_6090_Final_Project/Code/MATLAB
 TimeSeriesYearPlot('AB33_timeSeries.mat')
 h = gcf;
 cd /Users/Logan/Dropbox/ASEN6090/ASEN_6090_Final_Project/Presentations/final/tex/logan
-print(h,'-deps','ab33_pos_byYear.eps');
+print(h,'-deps',str);
 cd /Users/Logan/Dropbox/ASEN6090/ASEN_6090_Final_Project/Code/MATLAB
 
 
@@ -47,7 +47,7 @@ subplot(2,1,1)
 TimeSeriesPlot('P360_timeSeries.mat',sd,ed)
 subplot(2,1,2)
 SnotelPlot('p360',sd,ed)
-str = sprintf('p360_snotel.eps');
+str = sprintf('P360_long.png');
 h = gcf;
 cd /Users/Logan/Dropbox/ASEN6090/ASEN_6090_Final_Project/Presentations/final/tex/logan
 print(h,'-deps',str);
@@ -61,7 +61,7 @@ subplot(2,1,1)
 TimeSeriesPlot('P360_timeSeries.mat',sd,ed)
 subplot(2,1,2)
 SnotelPlot('p360',sd,ed)
-str = sprintf('p360_pos.eps');
+str = sprintf('P360_2012.png');
 h = gcf;
 cd /Users/Logan/Dropbox/ASEN6090/ASEN_6090_Final_Project/Presentations/final/tex/logan
 print(h,'-deps',str);
@@ -71,7 +71,7 @@ cd /Users/Logan/Dropbox/ASEN6090/ASEN_6090_Final_Project/Code/MATLAB
 TimeSeriesYearPlot('P360_timeSeries.mat')
 h = gcf;
 cd /Users/Logan/Dropbox/ASEN6090/ASEN_6090_Final_Project/Presentations/final/tex/logan
-print(h,'-deps','p360_pos_byYear.eps');
+print(h,'-deps',str);
 cd /Users/Logan/Dropbox/ASEN6090/ASEN_6090_Final_Project/Code/MATLAB
 
 %% P455
@@ -82,11 +82,11 @@ subplot(2,1,1)
 TimeSeriesPlot('P455_timeSeries.mat',sd,ed)
 subplot(2,1,2)
 SnotelPlot('p455',sd,ed)
-str = sprintf('p455_snotel.eps');
+str = sprintf('P455_long.png');
 h = gcf;
 cd /Users/Logan/Dropbox/ASEN6090/ASEN_6090_Final_Project/Presentations/final/tex/logan
 print(h,'-deps',str);
-cd /Users/Logan/Dropbox/ASEN6090/ASEN_6090_Final_Project/Code/MATLAB
+cd ..
 
 
 sd = [2011,9,3];
@@ -96,14 +96,14 @@ subplot(2,1,1)
 TimeSeriesPlot('P455_timeSeries.mat',sd,ed)
 subplot(2,1,2)
 SnotelPlot('p455',sd,ed)
-str = sprintf('p455_pos.eps');
+str = sprintf('P455_2012.png');
 h = gcf;
 cd /Users/Logan/Dropbox/ASEN6090/ASEN_6090_Final_Project/Presentations/final/tex/logan
 print(h,'-deps',str);
-cd /Users/Logan/Dropbox/ASEN6090/ASEN_6090_Final_Project/Code/MATLAB
+cd ..
 
 TimeSeriesYearPlot('P455_timeSeries.mat')
 h = gcf;
 cd /Users/Logan/Dropbox/ASEN6090/ASEN_6090_Final_Project/Presentations/final/tex/logan
-print(h,'-deps','p455_pos_byYear.eps');
-cd /Users/Logan/Dropbox/ASEN6090/ASEN_6090_Final_Project/Code/MATLAB
+print(h,'-deps',str);
+cd ..
