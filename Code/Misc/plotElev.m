@@ -25,27 +25,27 @@ lambda_L1 = c/(f_L1*1e6); % L1 wavelength in m
 lambda_L2 = c/(f_L2*1e6); % L2 wavelength in m
 
 %% Read in Data
-% 
-% % Read Observation File
-% fprintf('=> Using Rinex Observable File: %s',rinex_obs_file);
-% 
-% % Obtain site xyz from Rinex header 
-% % and observables
-% [rinex_obs_fid, site_xyz, data, ~] = read_rinex_obs([data_folder '/' rinex_obs_file]);
-% 
-% if rinex_obs_fid == -1
-% 	fprintf('... Not Found!\n');
-% 	fprintf('\n ==> Aborting!! <==\n');
-% 	return
-% else
-% 	fprintf('\t=>Done!\n');
-% end
-% 
-% % Read Nav File
-% fprintf('=> Using Rinex Nav File: %s',rinex_nav_file);
-% [gps_ephem,ionoparams] = read_GPSbroadcast([data_folder '/' rinex_nav_file]);
-% fprintf('... Done!\n');
-load p3600520.mat
+
+% Read Observation File
+fprintf('=> Using Rinex Observable File: %s',rinex_obs_file);
+
+% Obtain site xyz from Rinex header 
+% and observables
+[rinex_obs_fid, site_xyz, data, ~] = read_rinex_obs([data_folder '/rinex/' rinex_obs_file]);
+
+if rinex_obs_fid == -1
+	fprintf('... Not Found!\n');
+	fprintf('\n ==> Aborting!! <==\n');
+	return
+else
+	fprintf('\t=>Done!\n');
+end
+
+% Read Nav File
+fprintf('=> Using Rinex Nav File: %s',rinex_nav_file);
+[gps_ephem,ionoparams] = read_GPSbroadcast([data_folder '/rinex/' rinex_nav_file]);
+fprintf('... Done!\n');
+% load p3600520.mat
 
 %% Fun Part
 
