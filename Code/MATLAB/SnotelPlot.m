@@ -1,6 +1,6 @@
 function [] = SnotelPlot(sitename,start_date,end_date)
 
-
+global fsize asize
 str1 = sprintf('%s_2009.csv',sitename);
 str2 = sprintf('%s_2010.csv',sitename);
 str3 = sprintf('%s_2011.csv',sitename);
@@ -41,13 +41,14 @@ snow_data = snow_data(inds:inde,:);
 
 % plot data
 plot(dec_date,snow_data(:,5)*1000,'.','markersize',16);
+set(gca,'FontSize',asize)
 grid on
 axis fill
-ylabel('Snow depth (mm)','fontsize',12)
-xlabel('Year','fontsize',12)
+ylabel('Snow depth (mm)','fontsize',fsize)
+xlabel('Year','fontsize',fsize)
 % datestr_start = datestr(SerialDates(1),'yyyy-mm-dd');
 % datestr_end = datestr(SerialDates(end),'yyyy-mm-dd');
 % str = sprintf('Snotel time series for station',sitename);
-title('Snotel time series','fontsize',12);
+title('Snotel time series','fontsize',fsize);
 
 end

@@ -1,5 +1,6 @@
 function [] = TimeSeriesPlot(filename,start_date,end_date)
 %% Create a plot from the position
+global fsize asize
 % Load data from data directory
 % Inputs
 % filename = 'filename.mat'
@@ -62,12 +63,13 @@ SerialEnd = datenum(end_date(1),end_date(2),end_date(3));
 % errorbar(dates_dec,soln(3,:),sig(3,:),'*');
 plot(dates_dec,soln(3,:),'.','markersize',16);
 % datetick('x','yyyy.dd');
-xlabel('Year','fontsize',12)
-ylabel('Vertical (mm)','fontsize',12)
+set(gca,'FontSize',asize)
+xlabel('Year','fontsize',fsize)
+ylabel('Vertical (mm)','fontsize',fsize)
 datestr_start = datestr(SerialDates(1),'yyyy-mm-dd');
 datestr_end = datestr(SerialDates(end),'yyyy-mm-dd');
 str = sprintf('Station %s\nPosition time series\nFrom: %s to %s',filename(1:4),datestr_start,datestr_end);
-title(str,'fontsize',12);
+title(str,'fontsize',fsize);
 grid on
 axis fill
 h = gcf;

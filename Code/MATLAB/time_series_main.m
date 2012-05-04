@@ -3,6 +3,9 @@
 clc; clear all; close all;
 
 %% AB33
+global fsize asize
+asize = 12;
+fsize = 14;
 sd = [2009,1,1];
 ed = [2012,4,1];
 figure

@@ -1,4 +1,5 @@
 function [] = TimeSeriesYearPlot(filename)
+global fsize asize
 %% Create a plot from the position
 % Load data from data directory
 % Inputs
@@ -39,10 +40,11 @@ for i = 1 : length(years)
     
     %     errorbar(dec_dates_year{i,1},soln_year{i,1}(3,:),sig_year{i,1}(3,:),'Color',colors(i,:))
 end
-xlabel('Day of year','fontsize',12)
-ylabel('Vertical (mm)','fontsize',12)
+set(gca,'FontSize',asize)
+xlabel('Day of year','fontsize',fsize)
+ylabel('Vertical (mm)','fontsize',fsize)
 str = sprintf('Station %s\nVerical position variation vs. day of year\nFrom: 2009 to 2012',filename(1:4));
-title(str,'fontsize',12);
+title(str,'fontsize',fsize);
 legend('2009','2010','2011','2012')
 grid on
 end
