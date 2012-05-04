@@ -60,7 +60,7 @@ SerialEnd = datenum(end_date(1),end_date(2),end_date(3));
 
 % Plot Data
 % errorbar(dates_dec,soln(3,:),sig(3,:),'*');
-plot(dates_dec,soln(3,:),'.');
+plot(dates_dec,soln(3,:),'.','markersize',16);
 % datetick('x','yyyy.dd');
 xlabel('Year','fontsize',12)
 ylabel('Vertical (mm)','fontsize',12)
