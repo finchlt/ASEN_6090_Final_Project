@@ -7,7 +7,7 @@ lambda = c/f;
 
 % T = -20.55;
 T = 0;
-rho_d = 0.24;
+rho_d = 0.5;
 eps_re = 1 + 2*rho_d;
 eps_im = eps_re * 1.59 * 1e6 * (0.52*rho_d + 0.62*rho_d^2)/(7 + 1.7*rho_d + 0.7*rho_d^2)...
 	*(f^-1 + 1.23*1e-14*sqrt(f))*exp(0.036*T);
@@ -34,7 +34,7 @@ d_end = 2;
 
 for d = d_strt:d_step:d_end
     t(i) = d/abs(v);
-    E(i) = exp(j*( real(k)*d - omega*t(i) ))*exp(imag(k)*d);
+    E(i) = exp(1i*( real(k)*d - omega*t(i) ))*exp(imag(k)*d);
     A(i) = 1 - abs(E(i));
     i=i+1;
 end
@@ -51,5 +51,5 @@ set(gca,'FontSize',fontSize)
 grid on
 text(1.2,0.9998,'\rho_d=0.24','FontSize',fontSize)
 text(1.2,0.9997,'T=0C','FontSize',fontSize)
-text(1.2,0.9996,'\epsilon=1.48-j2.71x10^{-4}','FontSize',fontSize)
+text(1.2,0.9996,'\epsilon=1.48-j5.69x10^{-5}','FontSize',fontSize)
 

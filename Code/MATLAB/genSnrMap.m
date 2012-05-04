@@ -62,6 +62,9 @@ save([data_folder '/mat/snrMap'], 'mu', 'sig', 'n')
 return
 
 %%
+data_folder = [pwd '/../../Data'];
+load([data_folder '/mat/snrMap']) 
+%%
 col = ['r.';'g.';'b.';'c.';'m.';'y.';...
 	'rd';'gd';'bd';'cd';'md';'yd';...
 	'ro';'go';'bo';'co';'mo';'yo';...
@@ -73,8 +76,11 @@ errorbar(1:90,mu(prn,:),sig(prn,:),col(prn,:))
 hold on
 end
 
+fontSize=14;
+
+set(gca,'FontSize',fontSize)
 ylim([15 55])
 xlim([10 90])
-xlabel('Elevation')
-ylabel('SNR')
-title(['SNR Map for ' station])
+xlabel('Elevation','FontSize',fontSize)
+ylabel('SNR','FontSize',fontSize)
+title(['SNR Map for ' station],'FontSize',fontSize)

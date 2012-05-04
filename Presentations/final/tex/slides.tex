@@ -1,14 +1,25 @@
 % slides.tex
 \documentclass{beamer}
-\usetheme{default}
-\usepackage[absolute,overlay]{textpos} 
+
+\usetheme[height=7mm]{Marburg} 
+%\usepackage{beamerthemesplit}
+
+\usepackage{graphicx} 
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{cases}
+\usepackage{pifont}
+\usepackage[absolute,overlay]{textpos}
+
+%\usetheme{default}
+
 \newenvironment{reference}[2]{% 
   \begin{textblock*}{\textwidth}(#1,#2) 
       \footnotesize\it\bgroup\color{red!50!black}}{\egroup\end{textblock*}} 
 
-\title{Detecting Snow Cover on GPS Antenna}
+\title[]{Detecting Snow Cover on GPS Antenna}
 \subtitle{ASEN6090 Final Project}
-\author{Kyle Wolma\\Logan Finch\\Praveen Vikram\\}
+\author[]{Kyle Wolma\\Logan Finch\\Praveen Vikram\\}
 \institute[CU-ASEN]{
   Department of Aerospace Engineering Sciences\\
   Colorado University\\
@@ -24,6 +35,7 @@
 \end{frame}
 
 %--- outline frame -------------------------%
+\section[Outline]{}
 \begin{frame}{Outline}
 
 \begin{itemize}
@@ -38,6 +50,7 @@
 
 \end{frame}
 
+\section[Goals]{}
 \begin{frame}{Goals}
 \begin{itemize}
   \item Generate an index representative of snow cover over GPS antenna.
@@ -51,6 +64,7 @@
 \end{frame}
 
 %--- sites frame -------------------------%
+\section[Sites]{}
 \begin{frame}{Sites}
 
 Sites for Primary Study
@@ -67,6 +81,7 @@ Sites for Primary Study
  
 \end{frame}
 
+\section[Model]{}
 \begin{frame}{Model}
 \begin{itemize}
 \item Basic EM wave propogation (Plane solution to Maxwell's Equations)
@@ -82,6 +97,9 @@ Sites for Primary Study
     E = E_0 exp[j (Re(k).r - \omega t)]exp[-Im(k).r].
   \end{equation}
 \end{itemize}
+\begin{center}
+\includegraphics[width=0.8\linewidth,trim=100 100 100 100, clip=true]{model1.pdf}
+\end{center}
 \end{frame}
 
 \begin{frame}{Model}
@@ -120,7 +138,7 @@ Sites for Primary Study
 \end{itemize}
 
 \begin{reference}{4mm}{85mm}
-  [1] Y. Ozawa and D. Kuroiwa, "Dielectric Properties of ice, snow and supercooled water" in Microwave propogation in Snowy districts, no. 6, pp. 31-71, 1971
+  [1] Y. Ozawa and D. Kuroiwa, "\emph{\bf Dielectric Properties of ice, snow and supercooled water}" in Microwave propogation in Snowy districts, no. 6, pp. 31-71, 1971
 \end{reference}
 
 \end{frame}
@@ -140,22 +158,189 @@ Sites for Primary Study
         \end{equation*}
         \begin{align*}
           \epsilon_s'' = &\epsilon_s' \times 1.59 \times 10^6 \times \frac{0.52\rho_d + 0.62\rho_d^2}{7 + 1.7\rho_d + 0.7\rho_d^2}\\
-          & \times (f^{-1} + 1.23 \times 10^{-6}\sqrt{f})e^{0.036 T}
+          & \times (f_{L1}^{-1} + 1.23 \times 10^{-6}\sqrt{f_{L1}})e^{0.036 T}
         \end{align*}
       \item Where, \\$\rho_d$ is relative density of dry snow \\$T$ is the temperature of snow in Celsius.
     \end{itemize}
 \end{itemize}
 
 \begin{reference}{4mm}{85mm}
- [2] M.E. Tiuri, A.H. Sihvola, E.G. Nyfors, M.T. Hallikaiken, "The complex dielectric constant of snow at microwave frequencies'', IEEE J Ocean. Eng. OE-9 (5), pp. 377-382, 1984
+ [2] M.E. Tiuri, A.H. Sihvola, E.G. Nyfors, M.T. Hallikaiken, "\emph{\bf The complex dielectric constant of snow at microwave frequencies}", IEEE J Ocean. Eng. OE-9 (5), pp. 377-382, 1984
 \end{reference}
 
 \end{frame}
 
-\begin{frame}{Model - $\epsilon$ for Snow}
+\begin{frame}{Model}
+  \includegraphics[width=1\linewidth]{model_1.eps}
+\end{frame}
+
+\begin{frame}{Model}
+  \includegraphics[width=1\linewidth]{model_2.eps}
+\end{frame}
+
+\begin{frame}{??}
+  \begin{itemize}
+  \item R.T.K Jaldehag, J.M. Johansson, J.L. Davis, and P. Elosegui, "\emph{\bf Geodesy using the Swedish Permanent GPS Network: Effects of snow accumulation on estimates of site position"}, Geophys. Res. Lett, 23, pp. 1601-1604, 1996
+  \end{itemize}
+
+  \begin{columns}[t]
+    \column{0.4\textwidth}
+    \begin{block}{ }
+      \begin{itemize}
+      \item Snow Cause:
+        \begin{itemize}
+        \item Scattering
+        \item Excess path length
+        \end{itemize}
+      \item Vary elevation cutoff
+        \begin{itemize}
+        \item (a) $\approx$ Snow on Antenna
+        \item (b) $\approx$ Snow on Antena
+        \item (c) $\approx$ No snow on Antena
+        \end{itemize}
+      \end{itemize}
+    \end{block}
+
+    \column{0.6\textwidth}
+    \begin{block}{ }
+      \includegraphics[width=0.8\linewidth,clip=true]{logan/paper.pdf}
+    \end{block}
+  \end{columns}
+
+\end{frame}
+
+
+\begin{frame}{??}
+  \begin{itemize}
+  \item J. Stepanek, and W.C David, "\emph{\bf GPS signal reception under snow cover: A Pilot study establishing the potential usefulness of GPS in avalanche search and rescue"}, Wilderness and Environemental Medicine, 8, pp. 101-104, 1997
+    \begin{itemize}
+    \item Antenna burried under snow cover of incremental depths
+      \begin{itemize}
+         \item 5,15,25,35,45,55cm, 1m, 1.5m
+      \end{itemize}
+    \item parameters measured: signal quality, number of satellites visible and signal strength
+    \item reference reading taken above snow cover
+    \item No SNR data.
+    \item deals with signal quality flag from commercial receiver
+    \end{itemize}
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+  \includegraphics[width=1\linewidth,clip=true]{paper_snow_cover_tbl1.png}
+\end{frame}
+%%% Kyle's slides
+
+
+%%% SNR slides
+\section[SNR]{}
+\begin{frame}{SNR}
+  \includegraphics[width=1\linewidth,clip=true]{snr_p360_prn12.eps}
+\end{frame}
+
+\begin{frame}{SNR}
+  \begin{itemize}
+  \item Generate a statistical map of expected SNR values w.r.t Elevation angle.
+  \item Data from 2011 DOY 200-250 was used to generate the map
+  \item Each SV was considered seperately
+    \begin{itemize}
+    \item Individual Tracks could be tagged as 'Bad'
+    \item Each SV has varying transmit power
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{SNR Map}
+  \includegraphics[width=1\linewidth,clip=true]{snrMap.eps}
+  \begin{reference}{4mm}{90mm}
+    32 lines $->$ mean SNR for every SV, along with error bars.
+  \end{reference}
+\end{frame}
+
+\begin{frame}{SNR Index}
+  \includegraphics[width=1\linewidth,clip=true]{snrIndex.eps}
+\end{frame}
+
+%%% Logan's Slides
+\section[Position]{}
+\begin{frame}{Position Time Series - P360}
+  \begin{itemize}
+  \item 2009 to 2012\\
+  \end{itemize}
+
+  \begin{columns}
+    \column{.5\textwidth}
+    \includegraphics[width=1\linewidth,trim=70 300 70 50, clip=true]{logan/p360_pos.pdf}
+
+    \column{.5\textwidth}
+    \includegraphics[width=1\linewidth,trim=70 300 70 50, clip=true]{logan/p360_pos_byYear.pdf}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Position Time Series - P360}
+  \includegraphics[width=1\linewidth,trim=50 0 50 20, clip=true]{logan/p360_snotel.pdf}
+\end{frame}
+
+\begin{frame}{Position Time Series - AB33}
 \begin{itemize}
-      \item An approximate complex permittivity for dry snow for GPS frequncy is $1.48-j2.71\times 10^{-4}$
+\item 2009 to 2012\\
 \end{itemize}
+
+\begin{columns}
+\column{.5\textwidth}
+\includegraphics[width=1\linewidth,trim=70 300 70 50, clip=true]{logan/ab33_pos.pdf}
+
+\column{.5\textwidth}
+\includegraphics[width=1\linewidth,trim=70 300 70 50, clip=true]{logan/ab33_pos_byYear.pdf}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Position Time Series - AB33}
+  \includegraphics[width=1\linewidth,trim=50 0 50 20, clip=true]{logan/ab33_snotel.pdf}
+\end{frame}
+
+\begin{frame}{Position Time Series - P455}
+\begin{itemize}
+\item 2009 to 2012\\
+\end{itemize}
+
+\begin{columns}
+\column{.5\textwidth}
+\includegraphics[width=1\linewidth,trim=70 300 70 50, clip=true]{logan/p455_pos.pdf}
+
+\column{.5\textwidth}
+\includegraphics[width=1\linewidth,trim=70 300 70 50, clip=true]{logan/p455_pos_byYear.pdf}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Position Time Series - P455}
+  \includegraphics[width=1\linewidth,trim=50 0 50 20, clip=true]{logan/p455_snotel.pdf}
+\end{frame}
+
+\section[Conclusion]{}
+\begin{frame}{Conclusions}
+\begin{itemize}
+ \item MP1
+ \item SNR
+ \item position
+\end{itemize}
+
+\begin{reference}{4mm}{85mm}
+  \url{https://github.com/finchlt/ASEN_6090_Final_Project}
+\end{reference}
+\end{frame}
+
+\begin{frame}
+{
+\vspace{60pt}
+\huge
+\centering
+Questions\\}
+\begin{center}
+\ding{115} \ding{108} \ding{117}
+\end{center}
+
 \end{frame}
 
 \end{document}

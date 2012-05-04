@@ -27,7 +27,7 @@ snr_map = load([data_folder '/mat/snrMap']);
 
 truth_arr = zeros(1,90);
 snowIndex = zeros(1,90);
-
+nTrack = zeros(1,90);
 for doy = 1:90
 	try
 		filename=[station sprintf('%03d',doy) '0_' num2str(year) '_mp1.mat'];
@@ -40,15 +40,20 @@ for doy = 1:90
 	end
 	
 	% make truth array
+	truth_idx = find(truth(:,1) == year & truth(:,2) == data.header.month & truth(:,3) == data.header.day);
 	if ( (max(truth(truth(:,1) == year & truth(:,2) == data.header.month & truth(:,3) == data.header.day,12)) == 1) || ...
 			(max(isnan(truth(truth(:,1) == year & truth(:,2) == data.header.month & truth(:,3) == data.header.day,12))) == 1) )
 		truth_arr(doy) = 1;
-		if isnan(truth(truth(:,1) == year & truth(:,2) == data.header.month & truth(:,3) == data.header.day,12))
+		if isnan(truth(truth_idx,12))
 			truth_arr(doy) = NaN;
+		end
+		if ( min(truth(truth_idx,12))==0 && max(truth(truth_idx,12)) == 1)
+			truth_arr(doy) = 0.5;
 		end
 	end
 	
 	for prn = 1:32
+		fprintf('%d,',prn);
 		snr = data.S2(prn,:);
 		elev = round(data.elev(prn,:));
 		idx = find(elev>10);
@@ -56,9 +61,11 @@ for doy = 1:90
 		% check if snr val is within expected range
 		for i = 1:length(idx)
 			j=idx(i);
-			if ~(  (snr(j)> (snr_map.mu(prn,elev(j))-1*snr_map.sig(prn,elev(j))) ) && ...
-					 (snr(j)< (snr_map.mu(prn,elev(j))+1*snr_map.sig(prn,elev(j))) ) )
+			if ~(  (snr(j)> (snr_map.mu(prn,elev(j))-3*snr_map.sig(prn,elev(j))^2) ) && ...
+					 (snr(j)< (snr_map.mu(prn,elev(j))+3*snr_map.sig(prn,elev(j))^2) ) )
 				 snowIndex(doy) = 1;
+				 nTrack(doy) = nTrack(doy) + 1;
+				 break;
 			end
 		end
 	end
@@ -78,4 +85,4 @@ xlabel('DOY')
 legend('truth','Index from SNR')
 title(['Snow Index for ' station ' - Year ' num2str(year)])
 ylim([-0.5 1.5])
-set(gca,'YTickLabel',['     ';'Clear';'     ';'Snow '])
+set(gca,'YTickLabel',['     ';'Clear';'Part ';'Snow '])
