@@ -56,7 +56,7 @@ for s=1:3  % all 3 sites
     % Print
     h=gcf;
     str=sprintf('Figures/%s_mp',stationname{s});
-    print(h,'-dpng',str);
+    print(h,'-depsc',str);
     
     % MP1 Difference
     figure
@@ -72,7 +72,7 @@ for s=1:3  % all 3 sites
     % Print
     h=gcf;
     str=sprintf('Figures/%s_mpdiff',stationname{s});
-    print(h,'-dpng',str);
+    print(h,'-depsc',str);
     
     
     figure
@@ -88,51 +88,58 @@ for s=1:3  % all 3 sites
     % Print
     h=gcf;
     str=sprintf('Figures/%s_snow',stationname{s});
-    print(h,'-dpng',str);
+    print(h,'-depsc',str);
     
     
 end % End s=1:3  site for loop
 
 %% Compare P360 to Truth
 % Load Truth Data
-% p360truth=load()
-
+p360truth=load('../../Data/snow/dailytruth_p360.csv');
+minday=min(p360truth(:,1));
+maxday=max(p360truth(:,1));
 % Trim p360 data to 2012+-120
 trimdoy=(doy{2}-2012)*365;
-inddoy=(trimdoy>-120);
+inddoy=(trimdoy>=minday);
+trimdoy=trimdoy(inddoy);
+trimdiffmp=diffmp{2}(inddoy);
+
+inddoy=(trimdoy<=maxday);
 trimdoy=trimdoy(inddoy);
 trimdiffmp=diffmp{2}(inddoy);
 % trim truthdiffmp and truthdoy
-% truthdoy=trimdoy(logical(truth),:)
-% truthdiffmp=trimdiffmp(logical(truth),:)
-
+for k=1:length(trimdoy)
+    ind=(abs(p360truth(:,1)-trimdoy(k))<0.1);
+    truthdoy(k)=trimdoy(k)*p360truth(ind,2);
+    truthdiffmp(k)=trimdiffmp(k)*p360truth(ind,2);
+end
 % Trim 2 and 3 sigma data
 trimdoy_s2=(doysnow_s2{2}-2012)*365;
-inds2=trimdoy_s2>-120;
+inds2=trimdoy_s2>=minday;
 trimdoy_s2=trimdoy_s2(inds2);
 trimdoy_s3=(doysnow_s3{2}-2012)*365;
-inds3=trimdoy_s3>-120;
+inds3=trimdoy_s3>=minday;
 trimdoy_s3=trimdoy_s3(inds3);
 
 % Plot MP
 figure
 hold on
 plot(trimdoy,trimdiffmp,'linewidth',1.25)
-% plot(truthdoy,truthdiffmp,'ko','markersize',4,'linewidth',3)
+plot(truthdoy,truthdiffmp,'ko','markersize',4,'linewidth',3)
 xlabel('Days Since 2012','fontsize',14)
 ylabel('RMS MP1 Difference [m]','fontsize',14)
 legend('MP1 Difference','Snow Days')
+h=gcf;
+str=sprintf('Figures/p360_truth');
+print(h,'-depsc',str);
 
 % plot 2 and 3 sigma data
 figure
 hold on
-% plot(p360truth,p360truth)
+plot(p360truth(:,1),p360truth(:,2))
 plot(trimdoy_s2,.9,'ro','markersize',4,'linewidth',3)
-plot(trimdoy_s3,.95,'ko','markersize',4,'linewidth',3)
+% plot(trimdoy_s3,.95,'ko','markersize',4,'linewidth',3)
 ylabel('Flag','fontsize',14)
 xlabel('Days Since 2012','fontsize',14)
 title('P360 Truth Flags and Outliers','fontsize',16)
-legend('P360 Truth','2 \sigma','3 \sigma')
-h=gcf;
-str=sprintf('Figures/p360_truth');
-print(h,'-dpng',str);
+legend('P360 Truth','2 \sigma')%,'3 \sigma')
